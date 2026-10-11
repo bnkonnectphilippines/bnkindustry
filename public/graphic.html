@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Graphic Designing Services | BNKONNECT</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .graphic-cards{align-items:stretch;grid-template-columns:repeat(4,minmax(0,1fr))}
+    .graphic-card{display:flex;flex-direction:column;min-height:430px;overflow:hidden}
+    .graphic-card .photo-card{height:170px;flex:0 0 170px;margin:-1px -1px 18px;background:linear-gradient(180deg,rgba(7,16,31,0) 58%,rgba(7,16,31,.88)),#251b58 center/cover no-repeat;border-radius:18px 18px 10px 10px}
+    .graphic-card .card-content{display:flex;flex:1;flex-direction:column;padding:0 4px 4px}
+    .graphic-card h3{font-size:clamp(.78rem,1.2vw,.98rem);line-height:1.25;min-height:48px;margin:0 0 10px;letter-spacing:.015em}
+    .graphic-card .mini-label{font-size:.78rem;letter-spacing:.08em;white-space:nowrap;color:var(--muted);margin-bottom:8px}
+    .graphic-card .price{font-size:1.35rem;line-height:1.2;margin:0 0 18px;color:var(--mint);font-weight:800}
+    .graphic-card .btn{margin-top:auto;width:100%;text-align:center}
+    @media(max-width:1050px){.graphic-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:700px){.graphic-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.graphic-card{min-height:390px}.graphic-card .photo-card{height:140px;flex-basis:140px}.graphic-card h3{font-size:.72rem;min-height:54px}.graphic-card .mini-label{font-size:.66rem}.graphic-card .price{font-size:1.05rem}}
+    @media(max-width:430px){.graphic-cards{grid-template-columns:1fr}.graphic-card{min-height:410px}.graphic-card .photo-card{height:180px;flex-basis:180px}.graphic-card h3{font-size:.84rem;min-height:auto}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 42 42" aria-label="BNKONNECT logo"><rect width="42" height="42" rx="14" fill="#67a8ff"/><path d="M12 12h7v18h-7zm11 0h7v18h-7zm-9 8h12v4H14z" fill="#07101f"/></svg><span>BNKONNECT<small>YOUR SUCCESS IS OUR PRIORITY</small></span></a>
+    <nav class="nav-actions"><a class="btn" href="services.html">Service Menu</a><a class="btn" href="index.html">Home</a></nav>
+  </header>
+  <main class="container">
+    <section class="section reveal"><div class="eyebrow">CREATIVE STUDIO / 02</div><h1 class="page-title">Graphic Designing <span>Services</span></h1><p class="lede">Clear, polished visual work for brands, classrooms, campaigns and everything in between.</p></section>
+    <section class="cards graphic-cards stagger" aria-label="Graphic design services">
+      <script>
+        const items=[
+          ['BROCHURE AND FLYERS EDITING','3 Pages','₱100','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7-iBm6X649MUkj1ZEfQnUHmURUz4lrB0.png'],
+          ['POWERPOINT EDITING SERVICE','10 Pages','₱100','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-MPD7wFBGLKdV5SKfgdNqbwr0qp1sUQ.png'],
+          ['SOCIAL MEDIA POST DESIGN','1 Design','₱50','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-pFHc20kkA7GdOyBmimxN1r3adMkHXv.png'],
+          ['LOGO DESIGNING SERVICE','3 Designs','₱150','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-20JohXrp3iMj5oKuINwkVINuuqqt0M.png'],
+          ['PACKAGING DESIGNING SERVICE','5 Designs','₱300','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-AfrLD7IekgLPk71ILdVQCGVi6dde1y.png'],
+          ['MERCHANDISE DESIGNING','3 Designs','₱150','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9-FrnWvMuoFFFiNo2uzn08BhC0lrJm2T.png'],
+          ['TARPULIN EDITING SERVICE','3 Designs','₱150','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-N8TAgaxV2HwPl7vV06AlQG8gAhdbpp.png'],
+          ['PROFESSIONAL VIDEO EDITING','3 minutes','₱199','https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-7OAHEH7A7ZhzaKZeY9pjX4S7OeJAbZ.png']
+        ];
+        document.write(items.map((x,i)=>`<article class="card graphic-card" style="--i:${i}"><div class="photo-card" role="img" aria-label="${x[0]} visual preview" style="background-image:linear-gradient(180deg,rgba(7,16,31,0) 50%,rgba(7,16,31,.9)),url('${x[3]}')"></div><div class="card-content"><div class="mini-label">${x[1]} &nbsp;—&nbsp; ${x[2]}</div><h3>${x[0]}</h3><div class="price">${x[2]}</div><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://pci.jotform.com/form/262820664675465">BUY SERVICE</a></div></article>`).join(''));
+      </script>
+    </section>
+    <div class="center reveal" style="margin-top:35px"><a class="btn" href="graphic-pricing.html">VIEW PRICE PLAN →</a></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
